@@ -1,0 +1,174 @@
+/* Globális stílusok */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Menü stílusok */
+nav {
+    background-color: #003366;
+    color: white;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #00509e;
+}
+
+/* Táblázat stílusok */
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+table thead {
+    background-color: #003366;
+    color: white;
+    text-align: left;
+}
+
+table th, table td {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+table th {
+    cursor: pointer;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tbody tr:hover {
+    background-color: #d9ecf2;
+}
+
+.reserved {
+    background-color: #71a7dd;
+    color: #0f3b62; /* Világosabb kék szöveg a jobb kontraszt érdekében */
+    font-weight: bold; /* A szöveg hangsúlyozása */
+}
+
+/* H2 és egyéb szövegek */
+h2 {
+    text-align: center;
+    color: #003366;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+}
+
+#note {
+    text-align: center;
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Ikon stílusok */
+.delete-icon {
+    font-size: 1.2em;
+    color: red;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.delete-icon:hover {
+    transform: scale(1.2);
+}
+
+/* Toolbar & szűrő gombok (aktuális / előző időszak) */
+.toolbar {
+    margin: 10px auto 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn,
+.btn-outline {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: inline-block;
+}
+
+/* Alap gomb – kék háttér, fehér szöveg */
+.btn {
+    background-color: #0077cc;
+    color: #fff;
+    border: none;
+}
+
+.btn:hover {
+    background-color: #005fa3;
+}
+
+/* Kontúros gomb – áttetsző háttér, kék keret */
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid #0077cc;
+    color: #0077cc;
+}
+
+.btn-outline:hover {
+    background-color: #e6f2ff;
+}
+
+/* Reszponzív stílusok */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    table th, table td {
+        padding: 8px;
+    }
+
+    .toolbar {
+        flex-direction: column;
+    }
+
+    .btn, .btn-outline {
+        width: 100%;
+        text-align: center;
+    }
+}

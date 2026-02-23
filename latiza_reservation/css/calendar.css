@@ -1,0 +1,200 @@
+/* Globális stílusok */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Navigáció */
+nav {
+    background-color: #003366;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #00509e;
+}
+
+/* Fejléc */
+h2 {
+    text-align: center;
+    color: #003366;
+    margin: 20px 0;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Naptár konténer */
+#calendar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Egyes hónapok */
+.month {
+    display: inline-block;
+    vertical-align: top;
+    margin: 10px;
+    width: calc(33.333% - 20px);
+    background-color: #f7f9fc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.month h3 {
+    background-color: #00509e;
+    color: white;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Táblázat stílusok */
+.month table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.month th {
+    background-color: #003366;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.month td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.month td[data-destination]:hover {
+    background-color: #e6f7ff;
+    cursor: pointer;
+}
+
+/* Kiemelések */
+.highlight-orange {
+    background-color: orange;
+    color: white;
+}
+
+.highlight-red {
+    background-color: red;
+    color: white;
+}
+
+.highlight-blue {
+    background-color: blue;
+    color: white;
+}
+
+/* Reszponzív dizájn */
+@media (max-width: 768px) {
+    .month {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* Színes kockák stílusai */
+.orange {
+    background-color: orange;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border-radius: 4px;
+}
+
+.red {
+    background-color: red;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border-radius: 4px;
+}
+
+.blue {
+    background-color: blue;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border-radius: 4px;
+}
+
+/* Egyszerű „snackbar” üzenet kattintásra (mobilbarát) */
+#snackbar {
+    visibility: hidden;
+    min-width: 200px;
+    max-width: 90vw;
+    background: rgba(0,0,0,0.85);
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    padding: 10px 14px;
+    position: fixed;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    z-index: 9999;
+    font-size: 14px;
+  }
+  #snackbar.show {
+    visibility: visible;
+    animation: fadein 150ms, fadeout 150ms 2.5s;
+  }
+  @keyframes fadein { from {opacity: 0;} to {opacity: 1;} }
+  @keyframes fadeout { from {opacity: 1;} to {opacity: 0;} }
+
+  .btn{
+    padding:8px 12px; 
+    border-radius:8px; 
+    background:#281588; 
+    color:#fff; 
+    text-decoration:none; 
+    font-weight:600;
+  }
+  .btn-outline{
+    padding:8px 12px; 
+    border-radius:8px; 
+    border:1px solid #111; 
+    color:#111; 
+    text-decoration:none; 
+    font-weight:600; 
+    background:#fff;
+  }
